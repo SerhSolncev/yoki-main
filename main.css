@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Mont', Arial, sans-serif;
+}
+
+svg {
+    fill: currentColor;
+}
+
+@layer base {
+    /* Светлая тема */
+    :root {
+        --background: 0 0% 100%; /* Белый фон */
+        --content: 0 0% 0%; /* Чёрный текст */
+        --primary: 42 76% 42%; /* Основной цвет темы */
+        --gray: 42 76% 42%; /* Серый и там и там */
+        --grayLight: 0 0% 86%; /* Серый и там и там */
+        --grayLightSec: 233 10% 67%; /* Серый и там и там */
+        --blueDark: 240 28% 16%; /* Серый и там и там */
+    }
+
+    /* Тёмная тема */
+    .dark {
+        --background: 0 0% 0%; /* Черный фон */
+        --content: 0 0% 100%; /* Белый текст */
+        --gray: 0 0% 28%; /* Серый и там и там */
+        --grayLight: 0 0% 86%; /* Серый и там и там */
+        --grayLightSec: 233 10% 67%; /* Серый и там и там */
+        --blueDark: 240 28% 16%; /* Серый и там и там */
+    }
+}
+
+@layer utilities {
+
+    .overflow-x-inherit {
+        overflow-x: inherit;
+    }
+
+    .is-current {
+        @apply text-[#bc861b] underline pointer-events-none;
+    }
+
+    .is-current-sec {
+        @apply underline pointer-events-none;
+    }
+
+    .show {
+        @apply pointer-events-auto opacity-100;
+    }
+
+    .sticky-header {
+        @apply bg-background transition duration-300;
+    }
+
+    .sticky-header .logo {
+        @apply lg:max-w-[80px];
+    }
+
+    .sticky-header .menu-item {
+        @apply text-[14px];
+    }
+}
+
+.swiper-lock.js-prev-swiper, .swiper-lock.js-next-swiper {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.js-thumb-slider .swiper-slide-thumb-active .card-preview {
+    border-color: hsl(var(--primary));;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-SemiBold.woff2') format('woff2'),
+    url('./fonts/Mont-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-ExtraLight.woff2') format('woff2'),
+    url('./fonts/Mont-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Heavy.woff2') format('woff2'),
+    url('./fonts/Mont-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Black.woff2') format('woff2'),
+    url('./fonts/Mont-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Bold.woff2') format('woff2'),
+    url('./fonts/Mont-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Regular.woff2') format('woff2'),
+    url('./fonts/Mont-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Light.woff2') format('woff2'),
+    url('./fonts/Mont-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: url('./fonts/Mont-Thin.woff2') format('woff2'),
+    url('./fonts/Mont-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

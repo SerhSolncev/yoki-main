@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOKi</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-background overflow-x-hidden dark">
+<main>
+    <header class="w-full js-light-show fixed left-0 top-0 z-[10]" data-show-y="-50">
+        <div class="max-w-[1800px] mx-auto px-4 pb-4 lg:pb-6 pt-6 lg:pt-10 flex justify-between items-center">
+            <a href="#" class="logo transition-all duration-300 max-w-[60px] sm:max-w-[80px] lg:max-w-[112px]">
+                <img src="./images/icons/logo.svg" alt="" width="112" height="72" class="w-full h-auto">
+            </a>
+            <nav class="hidden md:flex gap-[30px] lg:gap-[54px] lg:mb-[20px]">
+                <a href="/" class="text-[14px] lg:text-[16px] font-[500] uppercase text-content hover:text-primary hover:underline transition-all duration-300 menu-item">Головна</a>
+                <a href="catalog.html" class="text-[14px] lg:text-[16px] font-[500] uppercase text-content hover:text-primary hover:underline transition-all duration-300 menu-item">Каталог товарів</a>
+                <a href="contacts.html" class="text-[14px] lg:text-[16px] font-[500] uppercase text-content hover:text-primary hover:underline transition-all duration-300 menu-item is-current">Контакти</a>
+                <a href="about.html" class="text-[14px] lg:text-[16px] font-[500] uppercase text-content hover:text-primary hover:underline transition-all duration-300 menu-item">О нас</a>
+            </nav>
+            <div class="flex items-center space-x-6 pb-[6px] lg:pb-0 relative lg:mb-[20px]">
+                <form class="absolute top-[50%] translate-y-[-50%] right-0 z-[2] w-[300px] sm:w-[420px] opacity-0 pointer-events-none transition duration-300 js-block-search">
+                    <input required type="search" id="search" placeholder="Пошук товару" class="w-full h-[52px] 2xl:h-[65px] border-[1px] border-grayLight rounded-[20px] px-4 lg:px-8 text-background text-[16px] placeholder-text-[16px] placeholder-text-background/50 focus:outline-none" >
+                    <button class="absolute top-[50%] right-4 translate-y-[-50%] w-[20px] h-[20px] lg:w-[24px] lg:h-[24px]">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7778 1.75C5.79187 1.75 1.75 5.79187 1.75 10.7778C1.75 15.7637 5.79187 19.8056 10.7778 19.8056C15.7637 19.8056 19.8056 15.7637 19.8056 10.7778C19.8056 5.79187 15.7637 1.75 10.7778 1.75ZM0.25 10.7778C0.25 4.96344 4.96344 0.25 10.7778 0.25C16.5921 0.25 21.3056 4.96345 21.3056 10.7778C21.3056 13.4062 20.3423 15.8096 18.7496 17.6544L23.5322 22.4716C23.8241 22.7655 23.8224 23.2404 23.5284 23.5322C23.2345 23.8241 22.7596 23.8224 22.4678 23.5284L17.6914 18.7175C15.8419 20.3294 13.4238 21.3056 10.7778 21.3056C4.96345 21.3056 0.25 16.5921 0.25 10.7778Z"/>
+                        </svg>
+                    </button>
+                </form>
+                <a href="#" class="text-content hover:text-primary transition duration-300 w-[20px] h-[20px] lg:w-[24px] lg:h-[24px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.14007 0.630048C4.90244 0.333408 5.7754 0.130848 7.05292 0.072672C8.33313 0.013536 8.74249 0 12.0014 0C15.2604 0 15.6695 0.014496 16.949 0.072672C18.2256 0.129888 19.098 0.333408 19.8619 0.630048C20.6499 0.936384 21.3199 1.3463 21.9867 2.01418C22.6535 2.68205 23.0637 3.35088 23.3709 4.1399C23.6675 4.90224 23.8701 5.77507 23.9283 7.05264C23.9865 8.33213 24 8.74118 24 12C24 15.2588 23.9865 15.6669 23.9283 16.9474C23.8711 18.2248 23.6675 19.0973 23.3709 19.8601C23.0637 20.6491 22.6546 21.319 21.9867 21.9858C21.3188 22.6526 20.6499 23.0628 19.8609 23.37C19.098 23.6666 18.2257 23.8692 16.948 23.9273C15.6685 23.9865 15.2594 24 12.0005 24C8.74153 24 8.33313 23.9855 7.05292 23.9273C5.7754 23.8692 4.90388 23.6666 4.14007 23.37C3.35053 23.0628 2.68206 22.6524 2.01426 21.9858C1.34645 21.3193 0.936421 20.6491 0.630073 19.8601C0.333421 19.0973 0.130854 18.2249 0.0726753 16.9474C0.0135369 15.6679 0 15.2588 0 12C0 8.74118 0.0135369 8.33213 0.0726753 7.05264C0.130854 5.77517 0.333421 4.90272 0.630073 4.1399C0.936421 3.3504 1.34636 2.68099 2.01426 2.01418C2.68216 1.34736 3.35053 0.936384 4.14007 0.630048ZM11.9993 7C9.23804 7 7 9.23877 7 12C7 14.7612 9.23804 17 11.9993 17C14.7608 17 17 14.7609 17 12C17 9.23908 14.7608 7 11.9993 7ZM5 12C5 8.1346 8.13307 5 11.9993 5C15.8652 5 19 8.13428 19 12C19 15.8657 15.8652 19 11.9993 19C8.13307 19 5 15.8654 5 12ZM19.5 6C20.3284 6 21 5.32843 21 4.5C21 3.67157 20.3284 3 19.5 3C18.6716 3 18 3.67157 18 4.5C18 5.32843 18.6716 6 19.5 6Z"/>
+                    </svg>
+                </a>
+                <button class="text-content hover:text-primary transition duration-300 w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] js-open-search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7778 1.75C5.79187 1.75 1.75 5.79187 1.75 10.7778C1.75 15.7637 5.79187 19.8056 10.7778 19.8056C15.7637 19.8056 19.8056 15.7637 19.8056 10.7778C19.8056 5.79187 15.7637 1.75 10.7778 1.75ZM0.25 10.7778C0.25 4.96344 4.96344 0.25 10.7778 0.25C16.5921 0.25 21.3056 4.96345 21.3056 10.7778C21.3056 13.4062 20.3423 15.8096 18.7496 17.6544L23.5322 22.4716C23.8241 22.7655 23.8224 23.2404 23.5284 23.5322C23.2345 23.8241 22.7596 23.8224 22.4678 23.5284L17.6914 18.7175C15.8419 20.3294 13.4238 21.3056 10.7778 21.3056C4.96345 21.3056 0.25 16.5921 0.25 10.7778Z"/>
+                    </svg>
+                </button>
+                <button class="text-content hover:text-primary transition duration-300 block md:hidden js-open-menu">
+                    <img src="./images/icons/burger.svg" alt="burger" width="24" height="24">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- mob menu -->
+    <div class="fixed top-0 left-0 w-full h-full z-[10] bg-background p-4 js-mob-menu transition duration-300 overflow-auto pb-[20px] bg-no-repeat bg-[bottom_left] opacity-0 pointer-events-none" style="background-image: url(./images/mob-pic.webp)">
+        <button type="button" class="w-[42px] h-[42px] text-content hover:text-primary absolute top-[48px] right-5 transition duration-300 js-close-menu">
+            <svg width="42" height="42" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M36.827 4.87102C37.2175 5.26154 37.2175 5.89471 36.827 6.28523L6.58699 36.5252C6.19647 36.9157 5.5633 36.9157 5.17278 36.5252C4.78225 36.1347 4.78225 35.5015 5.17278 35.111L35.4128 4.87102C35.8033 4.48049 36.4365 4.48049 36.827 4.87102Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.17278 4.87102C5.5633 4.48049 6.19647 4.48049 6.58699 4.87102L36.827 35.111C37.2175 35.5015 37.2175 36.1347 36.827 36.5252C36.4365 36.9157 35.8033 36.9157 35.4128 36.5252L5.17278 6.28523C4.78225 5.89471 4.78225 5.26154 5.17278 4.87102Z"/>
+            </svg>
+        </button>
+        <a href="/" class="flex justify-center mt-[30px]">
+            <img src="./images/icons/logo2.svg" alt="" width="95" height="59">
+        </a>
+        <div class="w-full flex justify-center mt-[24px]">
+            <img src="./images/icons/line.svg" alt="" width="319" height="1" class="w-full h-[1px] block">
+        </div>
+        <div class="flex flex-col items-center gap-[18px] mt-[20px]">
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link is-current-sec">Головна</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">Каталог товарів</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">Контакти</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">О нас</a>
+        </div>
+        <div class="flex flex-col items-center gap-[18px] mt-[42px]">
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">Yoki</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">Zeus</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">David</a>
+            <a href="#!" class="text-[20px] text-primary transition duration-300 mob-link">Рахувальна машинка</a>
+        </div>
+        <div class="w-full flex justify-center mt-[24px]">
+            <img src="./images/icons/line.svg" alt="" width="319" height="1" class="w-full h-[1px] block">
+        </div>
+        <div class="flex flex-col items-center gap-[16px] mt-[30px]">
+            <a href="tel:08007777777" class="text-[20px] text-content transition duration-300 mob-link">0 800 777 77 77</a>
+            <a href="mailto:sculpture@yoki.ua" class="text-[20px] text-content transition duration-300 mob-link">sculpture@yoki.ua</a>
+        </div>
+        <div class="flex justify-center gap-[18px] mt-[40px]">
+            <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[80px] h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                    <path d="M23.9773 7.05607C23.9211 5.78085 23.7149 4.90416 23.4195 4.14449C23.1147 3.33811 22.6459 2.61617 22.0316 2.01602C21.4315 1.40652 20.7048 0.932921 19.9077 0.632936C19.1437 0.337529 18.2716 0.131312 16.9963 0.0750879C15.7116 0.0141019 15.3038 0 12.0453 0C8.78686 0 8.379 0.0141019 7.09903 0.0703262C5.82382 0.126551 4.94712 0.332951 4.18763 0.628174C3.38108 0.932921 2.65914 1.40176 2.05899 2.01602C1.44949 2.61617 0.976073 3.34288 0.675904 4.13991C0.380498 4.90416 0.174281 5.77609 0.118057 7.0513C0.0570706 8.33604 0.0429688 8.74389 0.0429688 12.0023C0.0429688 15.2608 0.0570706 15.6686 0.113295 16.9486C0.169519 18.2238 0.375919 19.1005 0.671326 19.8602C0.976073 20.6666 1.44949 21.3885 2.05899 21.9887C2.65914 22.5982 3.38584 23.0718 4.18287 23.3717C4.94712 23.6672 5.81906 23.8734 7.09445 23.9296C8.37424 23.986 8.78228 23.9999 12.0407 23.9999C15.2992 23.9999 15.707 23.986 16.987 23.9296C18.2622 23.8734 19.1389 23.6672 19.8984 23.3717C21.5113 22.7482 22.7865 21.4729 23.4101 19.8602C23.7053 19.096 23.9117 18.2238 23.968 16.9486C24.0242 15.6686 24.0383 15.2608 24.0383 12.0023C24.0383 8.74389 24.0335 8.33604 23.9773 7.05607ZM21.8161 16.8549C21.7644 18.027 21.5675 18.6599 21.4034 19.0819C21.0002 20.1274 20.1704 20.9572 19.1248 21.3605C18.7029 21.5246 18.0653 21.7215 16.8978 21.7729C15.6319 21.8293 15.2523 21.8433 12.0501 21.8433C8.84784 21.8433 8.46343 21.8293 7.20214 21.7729C6.03003 21.7215 5.3971 21.5246 4.97514 21.3605C4.45484 21.1682 3.98124 20.8634 3.59682 20.4649C3.19831 20.0758 2.89356 19.6069 2.70126 19.0866C2.53717 18.6647 2.34029 18.027 2.28883 16.8596C2.23242 15.5937 2.2185 15.2139 2.2185 12.0117C2.2185 8.80946 2.23242 8.42505 2.28883 7.16394C2.34029 5.99183 2.53717 5.3589 2.70126 4.93694C2.89356 4.41645 3.19831 3.94303 3.60158 3.55843C3.99058 3.15992 4.45942 2.85517 4.9799 2.66306C5.40186 2.49896 6.03956 2.30209 7.2069 2.25044C8.47277 2.19422 8.85261 2.18011 12.0546 2.18011C15.2616 2.18011 15.6413 2.19422 16.9026 2.25044C18.0747 2.30209 18.7076 2.49896 19.1296 2.66306C19.6499 2.85517 20.1235 3.15992 20.5079 3.55843C20.9064 3.94761 21.2112 4.41645 21.4034 4.93694C21.5675 5.3589 21.7644 5.99641 21.8161 7.16394C21.8723 8.42981 21.8864 8.80946 21.8864 12.0117C21.8864 15.2139 21.8723 15.589 21.8161 16.8549Z"/>
+                    <path d="M12.0442 5.83594C8.64049 5.83594 5.87891 8.59734 5.87891 12.0012C5.87891 15.4051 8.64049 18.1665 12.0442 18.1665C15.448 18.1665 18.2094 15.4051 18.2094 12.0012C18.2094 8.59734 15.448 5.83594 12.0442 5.83594ZM12.0442 16.0005C9.83604 16.0005 8.04492 14.2095 8.04492 12.0012C8.04492 9.79289 9.83604 8.00195 12.0442 8.00195C14.2525 8.00195 16.0434 9.79289 16.0434 12.0012C16.0434 14.2095 14.2525 16.0005 12.0442 16.0005Z"/>
+                    <path d="M19.8925 5.59361C19.8925 6.38844 19.248 7.03292 18.453 7.03292C17.6581 7.03292 17.0137 6.38844 17.0137 5.59361C17.0137 4.79859 17.6581 4.1543 18.453 4.1543C19.248 4.1543 19.8925 4.79859 19.8925 5.59361Z"/>
+                </svg>
+            </a>
+            <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[80px] h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                    <path d="M9.41718 15.1814L9.02018 20.7654C9.58818 20.7654 9.83418 20.5214 10.1292 20.2284L12.7922 17.6834L18.3102 21.7244C19.3222 22.2884 20.0352 21.9914 20.3082 20.7934L23.9302 3.82141L23.9312 3.82041C24.2522 2.32441 23.3902 1.73941 22.4042 2.10641L1.11418 10.2574C-0.338822 10.8214 -0.316822 11.6314 0.867178 11.9984L6.31018 13.6914L18.9532 5.78041C19.5482 5.38641 20.0892 5.60441 19.6442 5.99841L9.41718 15.1814Z"/>
+                </svg>
+            </a>
+            <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[80px] h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                    <path d="M15.9975 3.985H18.1885V0.169C17.8105 0.117 16.5105 0 14.9965 0C11.8375 0 9.6735 1.987 9.6735 5.639V9H6.1875V13.266H9.6735V24H13.9475V13.267H17.2925L17.8235 9.001H13.9465V6.062C13.9475 4.829 14.2795 3.985 15.9975 3.985Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <!-- mob menu -->
+
+    <div class="max-w-[1800px] mx-auto px-4">
+        <!-- breadcrumbs -->
+        <nav class="flex js-light-show" data-show-y="-10" data-duration="0.3" data-delay="0.3">
+            <ul class="flex space-x-1 text-[10px]">
+                <li>
+                    <a href="#" class="text-primary hover:text-content transition duration-300">Yoki sculpture</a>
+                </li>
+                <li>
+                    <span class="text-content">-</span>
+                </li>
+                <li>
+                    <a class="text-content">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- top -->
+        <div class="flex justify-between gap-2 pt-1 js-light-show" data-show-y="-10" data-delay="0.6">
+            <h1 class="text-[28px] lg:text-[32px] font-black uppercase bg-gradient-to-t from-[#987835] to-[#D9A233] bg-clip-text text-transparent">Контакти</h1>
+            <ul class="hidden md:flex items-center space-x-[14px] text-[14px] lg:text-[16px] 2xl:text-[20px] text-primary">
+                <li>
+                    <a href="#!" class="hover:text-content transition duration-300">Yoki</a>
+                </li>
+                <li>
+                    <span class="block bg-primary w-[3px] h-[3px] rounded"></span>
+                </li>
+                <li>
+                    <a href="#!" class="hover:text-content transition duration-300">Zeus</a>
+                </li>
+                <li>
+                    <span class="block bg-primary w-[3px] h-[3px] rounded"></span>
+                </li>
+                <li>
+                    <a href="#!" class="hover:text-content transition duration-300">David</a>
+                </li>
+                <li>
+                    <span class="block bg-primary w-[3px] h-[3px] rounded"></span>
+                </li>
+                <li>
+                    <a href="#!" class="hover:text-content transition duration-300">Рахувальна машинка</a>
+                </li>
+            </ul>
+        </div>
+        <div class="relative flex flex-col lg:flex-row pt-[20px] lg:pt-[50px]">
+            <div class="w-full lg:max-w-[800px] pb-[50px]">
+                <div class="flex gap-[18px] mb-[30px] 2xl:mb-[43px] js-light-show" data-show-y="50" data-delay="0.1">
+                    <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                            <path d="M23.9773 7.05607C23.9211 5.78085 23.7149 4.90416 23.4195 4.14449C23.1147 3.33811 22.6459 2.61617 22.0316 2.01602C21.4315 1.40652 20.7048 0.932921 19.9077 0.632936C19.1437 0.337529 18.2716 0.131312 16.9963 0.0750879C15.7116 0.0141019 15.3038 0 12.0453 0C8.78686 0 8.379 0.0141019 7.09903 0.0703262C5.82382 0.126551 4.94712 0.332951 4.18763 0.628174C3.38108 0.932921 2.65914 1.40176 2.05899 2.01602C1.44949 2.61617 0.976073 3.34288 0.675904 4.13991C0.380498 4.90416 0.174281 5.77609 0.118057 7.0513C0.0570706 8.33604 0.0429688 8.74389 0.0429688 12.0023C0.0429688 15.2608 0.0570706 15.6686 0.113295 16.9486C0.169519 18.2238 0.375919 19.1005 0.671326 19.8602C0.976073 20.6666 1.44949 21.3885 2.05899 21.9887C2.65914 22.5982 3.38584 23.0718 4.18287 23.3717C4.94712 23.6672 5.81906 23.8734 7.09445 23.9296C8.37424 23.986 8.78228 23.9999 12.0407 23.9999C15.2992 23.9999 15.707 23.986 16.987 23.9296C18.2622 23.8734 19.1389 23.6672 19.8984 23.3717C21.5113 22.7482 22.7865 21.4729 23.4101 19.8602C23.7053 19.096 23.9117 18.2238 23.968 16.9486C24.0242 15.6686 24.0383 15.2608 24.0383 12.0023C24.0383 8.74389 24.0335 8.33604 23.9773 7.05607ZM21.8161 16.8549C21.7644 18.027 21.5675 18.6599 21.4034 19.0819C21.0002 20.1274 20.1704 20.9572 19.1248 21.3605C18.7029 21.5246 18.0653 21.7215 16.8978 21.7729C15.6319 21.8293 15.2523 21.8433 12.0501 21.8433C8.84784 21.8433 8.46343 21.8293 7.20214 21.7729C6.03003 21.7215 5.3971 21.5246 4.97514 21.3605C4.45484 21.1682 3.98124 20.8634 3.59682 20.4649C3.19831 20.0758 2.89356 19.6069 2.70126 19.0866C2.53717 18.6647 2.34029 18.027 2.28883 16.8596C2.23242 15.5937 2.2185 15.2139 2.2185 12.0117C2.2185 8.80946 2.23242 8.42505 2.28883 7.16394C2.34029 5.99183 2.53717 5.3589 2.70126 4.93694C2.89356 4.41645 3.19831 3.94303 3.60158 3.55843C3.99058 3.15992 4.45942 2.85517 4.9799 2.66306C5.40186 2.49896 6.03956 2.30209 7.2069 2.25044C8.47277 2.19422 8.85261 2.18011 12.0546 2.18011C15.2616 2.18011 15.6413 2.19422 16.9026 2.25044C18.0747 2.30209 18.7076 2.49896 19.1296 2.66306C19.6499 2.85517 20.1235 3.15992 20.5079 3.55843C20.9064 3.94761 21.2112 4.41645 21.4034 4.93694C21.5675 5.3589 21.7644 5.99641 21.8161 7.16394C21.8723 8.42981 21.8864 8.80946 21.8864 12.0117C21.8864 15.2139 21.8723 15.589 21.8161 16.8549Z"/>
+                            <path d="M12.0442 5.83594C8.64049 5.83594 5.87891 8.59734 5.87891 12.0012C5.87891 15.4051 8.64049 18.1665 12.0442 18.1665C15.448 18.1665 18.2094 15.4051 18.2094 12.0012C18.2094 8.59734 15.448 5.83594 12.0442 5.83594ZM12.0442 16.0005C9.83604 16.0005 8.04492 14.2095 8.04492 12.0012C8.04492 9.79289 9.83604 8.00195 12.0442 8.00195C14.2525 8.00195 16.0434 9.79289 16.0434 12.0012C16.0434 14.2095 14.2525 16.0005 12.0442 16.0005Z"/>
+                            <path d="M19.8925 5.59361C19.8925 6.38844 19.248 7.03292 18.453 7.03292C17.6581 7.03292 17.0137 6.38844 17.0137 5.59361C17.0137 4.79859 17.6581 4.1543 18.453 4.1543C19.248 4.1543 19.8925 4.79859 19.8925 5.59361Z"/>
+                        </svg>
+                    </a>
+                    <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                            <path d="M9.41718 15.1814L9.02018 20.7654C9.58818 20.7654 9.83418 20.5214 10.1292 20.2284L12.7922 17.6834L18.3102 21.7244C19.3222 22.2884 20.0352 21.9914 20.3082 20.7934L23.9302 3.82141L23.9312 3.82041C24.2522 2.32441 23.3902 1.73941 22.4042 2.10641L1.11418 10.2574C-0.338822 10.8214 -0.316822 11.6314 0.867178 11.9984L6.31018 13.6914L18.9532 5.78041C19.5482 5.38641 20.0892 5.60441 19.6442 5.99841L9.41718 15.1814Z"/>
+                        </svg>
+                    </a>
+                    <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                            <path d="M15.9975 3.985H18.1885V0.169C17.8105 0.117 16.5105 0 14.9965 0C11.8375 0 9.6735 1.987 9.6735 5.639V9H6.1875V13.266H9.6735V24H13.9475V13.267H17.2925L17.8235 9.001H13.9465V6.062C13.9475 4.829 14.2795 3.985 15.9975 3.985Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-content text-[13px] sm:text-[15px] 2xl:text-[16px] font-light js-light-show" data-show-y="50" data-delay="0.3">
+                    Скульптури YOKI-стануть сучасним доповненням вашого інтерʼєру будинку чи офісу. Кожен виріб це -ручна ручна робота. Для нас важлива кожна деталь, від створення скульптури, розробки ескізу до розпису самої скульптури.
+                </p>
+                <div class="max-w-full gap-[20px] lg:gap-[40px] mt-[30px] 2xl:mt-[65px] flex justify-between gap-[20px] flex-col sm:flex-row lg:block">
+                    <div class="js-light-show" data-show-y="50" data-delay="0.5">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light">Багатоканальний телефон гарячої лінії.  Щоденно 9:00-21:00</span>
+                        <a href="tel:08007777777" class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold hover:text-primary transition duration-300">0 800 777 77 77</a>
+                    </div>
+
+                    <div class="xl:mt-[25px] js-light-show" data-show-y="50" data-delay="0.7">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light">Електронна адреса контакт-центру:</span>
+                        <a href="mailto:sculpture@yoki.ua" class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold hover:text-primary transition duration-300">sculpture@yoki.ua</a>
+                    </div>
+
+                    <div class="xl:mt-[25px] js-light-show" data-show-y="50" data-delay="1">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light ">Наша адреса</span>
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold">Київ: с. Крюковщина, вул. Балукова, 1е</span>
+                    </div>
+                </div>
+                <div class="js-light-show mt-[30px] 2xl:mt-[54px]" data-show-y="50" data-delay="1.3" data-start="top 100%">
+                    <button class=" flex items-center justify-center rounded-[20px] text-[14px] sm:text-[16px] 2xl:text-[18px] font-bold border-2 border-primary w-full sm:max-w-[347px] h-[48px] sm:h-[60px] 2xl:h-[74px] text-primary hover:bg-primary hover:border-primary hover:text-content transition duration-300 " >
+                        Задати питання
+                    </button>
+                </div>
+            </div>
+            <div class="relative xl:-mt-[82px] shrink-0">
+                <div class="w-[55%] h-[65%] absolute z-[2] top-[20%] left-0 sm:left-[10%] w-full h-full hover:scale-105 text-transparent js-light-show" data-show-y="30" data-delay="0.3">
+                    <svg width="533" height="532" viewBox="0 0 533 532" fill="transparent" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                        <path d="M532.5 266C532.5 412.631 413.409 531.5 266.5 531.5C119.591 531.5 0.5 412.631 0.5 266C0.5 119.369 119.591 0.5 266.5 0.5C413.409 0.5 532.5 119.369 532.5 266Z" stroke="#BC861B" stroke-opacity="0.33"/>
+                    </svg>
+                </div>
+                <div class="absolute opacity-20 top-[40%] lg:top-[5%] left-[0%] w-[90vw] lg:w-[39vw] max-w-[750px] h-[90vw] lg:h-[39vw] max-h-[750px] bg-primary  blur-[100px] rounded-[100%]">
+                </div>
+                <div class="relative z-[4] w-full lg:w-[600px] xl:w-[700px] 2xl:w-[877px] h-[0px] pb-[96%] js-light-show" data-show-z="0.95" data-delay="1.2">
+                    <img src="./images/contacts.png" alt="" width="412" height="572" class="block absolute top-0 left-0 w-full h-full">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overflow-hidden bg-primary flex items-center text-[16px] lg:text-[20px] gap-[20px] py-[14px] lg:py-[23px] mb-[60px] lg:mb-[100px] 2xl:mb-[179px] relative z-[4]" style="transform: rotate(-2deg);">
+        <div class="animate-marquee whitespace-nowrap text-content uppercase font-light flex items-center gap-[20px]">
+            <span>УКРАЇНСЬКИЙ БРЕНД   скульптур YOKI, Zeus та David</span>
+            <span class="animate-marquee block bg-content w-[3px] h-[3px] rounded"></span>
+        </div>
+
+        <div class="animate-marquee whitespace-nowrap text-content  uppercase font-light flex items-center gap-[20px]">
+            <span>УКРАЇНСЬКИЙ БРЕНД   скульптур YOKI, Zeus та David</span>
+            <span class="animate-marquee block bg-content w-[3px] h-[3px] rounded"></span>
+        </div>
+
+        <div class="animate-marquee whitespace-nowrap text-content  uppercase font-light flex items-center gap-[20px]">
+            <span>УКРАЇНСЬКИЙ БРЕНД   скульптур YOKI, Zeus та David</span>
+            <span class="animate-marquee block bg-content w-[3px] h-[3px] rounded"></span>
+        </div>
+
+        <div class="animate-marquee whitespace-nowrap text-content  uppercase font-light flex items-center gap-[20px]">
+            <span>УКРАЇНСЬКИЙ БРЕНД   скульптур YOKI, Zeus та David</span>
+            <span class="animate-marquee block bg-content w-[3px] h-[3px] rounded"></span>
+        </div>
+    </div>
+
+    <footer class="pb-[50px] relative pb-[50px] relative z-[4]">
+        <div class="absolute bottom-0 right-0 w-full h-auto max-w-[1152px]">
+            <img src="./images/footer-bg.png" alt="" width="1152" height="161" class="block">
+        </div>
+        <div class="max-w-[1800px] mx-auto px-4 ">
+            <div class="flex items-start justify-between  gap-[30px] lg:gap-[50px] flex-wrap xl:flex-nowrap pb-[80px]">
+                <div class="shrink-0 pt-[16px]">
+                    <a href="#" class="block logo max-w-[60px] sm:max-w-[80px] lg:max-w-[112px] js-light-show" data-show-y="50" data-delay="0.4">
+                        <img src="./images/icons/logo.svg" alt="" width="112" height="72" class="w-full h-auto">
+                    </a>
+
+                    <div class="flex gap-[18px] mt-[30px] 2xl:mt-[73px] js-light-show" data-show-y="50" data-delay="0.7">
+                        <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                                <path d="M23.9773 7.05607C23.9211 5.78085 23.7149 4.90416 23.4195 4.14449C23.1147 3.33811 22.6459 2.61617 22.0316 2.01602C21.4315 1.40652 20.7048 0.932921 19.9077 0.632936C19.1437 0.337529 18.2716 0.131312 16.9963 0.0750879C15.7116 0.0141019 15.3038 0 12.0453 0C8.78686 0 8.379 0.0141019 7.09903 0.0703262C5.82382 0.126551 4.94712 0.332951 4.18763 0.628174C3.38108 0.932921 2.65914 1.40176 2.05899 2.01602C1.44949 2.61617 0.976073 3.34288 0.675904 4.13991C0.380498 4.90416 0.174281 5.77609 0.118057 7.0513C0.0570706 8.33604 0.0429688 8.74389 0.0429688 12.0023C0.0429688 15.2608 0.0570706 15.6686 0.113295 16.9486C0.169519 18.2238 0.375919 19.1005 0.671326 19.8602C0.976073 20.6666 1.44949 21.3885 2.05899 21.9887C2.65914 22.5982 3.38584 23.0718 4.18287 23.3717C4.94712 23.6672 5.81906 23.8734 7.09445 23.9296C8.37424 23.986 8.78228 23.9999 12.0407 23.9999C15.2992 23.9999 15.707 23.986 16.987 23.9296C18.2622 23.8734 19.1389 23.6672 19.8984 23.3717C21.5113 22.7482 22.7865 21.4729 23.4101 19.8602C23.7053 19.096 23.9117 18.2238 23.968 16.9486C24.0242 15.6686 24.0383 15.2608 24.0383 12.0023C24.0383 8.74389 24.0335 8.33604 23.9773 7.05607ZM21.8161 16.8549C21.7644 18.027 21.5675 18.6599 21.4034 19.0819C21.0002 20.1274 20.1704 20.9572 19.1248 21.3605C18.7029 21.5246 18.0653 21.7215 16.8978 21.7729C15.6319 21.8293 15.2523 21.8433 12.0501 21.8433C8.84784 21.8433 8.46343 21.8293 7.20214 21.7729C6.03003 21.7215 5.3971 21.5246 4.97514 21.3605C4.45484 21.1682 3.98124 20.8634 3.59682 20.4649C3.19831 20.0758 2.89356 19.6069 2.70126 19.0866C2.53717 18.6647 2.34029 18.027 2.28883 16.8596C2.23242 15.5937 2.2185 15.2139 2.2185 12.0117C2.2185 8.80946 2.23242 8.42505 2.28883 7.16394C2.34029 5.99183 2.53717 5.3589 2.70126 4.93694C2.89356 4.41645 3.19831 3.94303 3.60158 3.55843C3.99058 3.15992 4.45942 2.85517 4.9799 2.66306C5.40186 2.49896 6.03956 2.30209 7.2069 2.25044C8.47277 2.19422 8.85261 2.18011 12.0546 2.18011C15.2616 2.18011 15.6413 2.19422 16.9026 2.25044C18.0747 2.30209 18.7076 2.49896 19.1296 2.66306C19.6499 2.85517 20.1235 3.15992 20.5079 3.55843C20.9064 3.94761 21.2112 4.41645 21.4034 4.93694C21.5675 5.3589 21.7644 5.99641 21.8161 7.16394C21.8723 8.42981 21.8864 8.80946 21.8864 12.0117C21.8864 15.2139 21.8723 15.589 21.8161 16.8549Z"/>
+                                <path d="M12.0442 5.83594C8.64049 5.83594 5.87891 8.59734 5.87891 12.0012C5.87891 15.4051 8.64049 18.1665 12.0442 18.1665C15.448 18.1665 18.2094 15.4051 18.2094 12.0012C18.2094 8.59734 15.448 5.83594 12.0442 5.83594ZM12.0442 16.0005C9.83604 16.0005 8.04492 14.2095 8.04492 12.0012C8.04492 9.79289 9.83604 8.00195 12.0442 8.00195C14.2525 8.00195 16.0434 9.79289 16.0434 12.0012C16.0434 14.2095 14.2525 16.0005 12.0442 16.0005Z"/>
+                                <path d="M19.8925 5.59361C19.8925 6.38844 19.248 7.03292 18.453 7.03292C17.6581 7.03292 17.0137 6.38844 17.0137 5.59361C17.0137 4.79859 17.6581 4.1543 18.453 4.1543C19.248 4.1543 19.8925 4.79859 19.8925 5.59361Z"/>
+                            </svg>
+                        </a>
+                        <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                                <path d="M9.41718 15.1814L9.02018 20.7654C9.58818 20.7654 9.83418 20.5214 10.1292 20.2284L12.7922 17.6834L18.3102 21.7244C19.3222 22.2884 20.0352 21.9914 20.3082 20.7934L23.9302 3.82141L23.9312 3.82041C24.2522 2.32441 23.3902 1.73941 22.4042 2.10641L1.11418 10.2574C-0.338822 10.8214 -0.316822 11.6314 0.867178 11.9984L6.31018 13.6914L18.9532 5.78041C19.5482 5.38641 20.0892 5.60441 19.6442 5.99841L9.41718 15.1814Z"/>
+                            </svg>
+                        </a>
+                        <a href="#!" target="_blank" class="flex justify-center items-center rounded-[100%] border-[1px] border-content/10 w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] 2xl:w-[80px] 2xl:h-[80px] text-content hover:text-primary hover:border-primary transition duration-300">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-[16px] h-[16px] 2xl:w-[24px] 2xl:h-[24px]">
+                                <path d="M15.9975 3.985H18.1885V0.169C17.8105 0.117 16.5105 0 14.9965 0C11.8375 0 9.6735 1.987 9.6735 5.639V9H6.1875V13.266H9.6735V24H13.9475V13.267H17.2925L17.8235 9.001H13.9465V6.062C13.9475 4.829 14.2795 3.985 15.9975 3.985Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:max-w-[500px] lg:max-w-[650px] xl:max-w-[735px] xl:mr-[38px]">
+                    <p class="text-content text-[13px] sm:text-[15px] 2xl:text-[16px] font-light js-light-show" data-show-y="50" data-delay="0.5">
+                        Ми впевнені, що впровадження бізнесу (оптимізація сервісу) життєво важливе для розвитку, тому ми постійно працюємо над поліпшенням та разом з тим, відкриті до інновацій.
+                    </p>
+                    <p class="text-content text-[12px] sm:text-[14px] 2xl:text-[15px] font-light leading-[1.7] mt-[18px] lg:mt-[26px] js-light-show" data-show-y="50" data-delay="0.7">
+                        Мета товариства проста: це забезпечення вам накопичення, продуктів харчування та глобального громадянства. У своїй діяльності підприємство застосовує універсальні захоплюючі технології новаторства, безпрограшних домовленостей та зберігання даних. Одна з провідних глобальних компаній надає широкий спектр послуг, а саме виготовлення ключів, послуги доставки кореспонденції та передачу даних. Тривале вдосконалення, робітнича вправність, професіоналізм дружньої команди та синергетичне поєднання забезпечили підприємству визнання і провідну роль на світовому ринку.
+                    </p>
+                </div>
+
+                <div class="xl:shrink-0 xl:max-w-[400px] 2xl:max-w-full flex flex-col md:flex-row justify-between gap-[20px] lg:gap-[40px] xl:block">
+                    <div class="js-light-show" data-show-y="50" data-delay="0.5">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light">Багатоканальний телефон гарячої лінії.  Щоденно 9:00-21:00</span>
+                        <a href="tel:08007777777" class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold hover:text-primary transition duration-300">0 800 777 77 77</a>
+                    </div>
+
+                    <div class="xl:mt-[25px] js-light-show" data-show-y="50" data-delay="0.7">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light">Електронна адреса контакт-центру:</span>
+                        <a href="mailto:sculpture@yoki.ua" class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold hover:text-primary transition duration-300">sculpture@yoki.ua</a>
+                    </div>
+
+                    <div class="xl:mt-[25px] js-light-show" data-show-y="50" data-delay="1">
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-light ">Наша адреса</span>
+                        <span class="block leading-[1.7] text-[14px] lg:text-[16px] text-content font-bold">Київ: с. Крюковщина, вул. Балукова, 1е</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-content text-[13px] sm:text-[15px] 2xl:text-[16px] font-light js-light-show" data-show-y="50" data-delay="1">
+                Copyright &copy; 2024 YOKI SCULPTURE
+            </p>
+        </div>
+    </footer>
+</main>
+<script defer src="./js/modules/scrolltrigges.min.js"></script>
+<script defer src="./js/modules/gsap.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+
+</html>
